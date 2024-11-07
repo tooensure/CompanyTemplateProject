@@ -1,0 +1,177 @@
+= Project Phases and Specifications
+:toc:
+:sectnums:
+
+== Project Overview
+
+The **Company Template Project** is a modular .NET solution designed for building robust, cloud-native business applications. It integrates several key technologies, including **Aspire Framework** for modular services, **AI Semantic Kernel** for intelligent data processing, **Redis** for caching and real-time data operations, and a **Blazor WebAssembly** frontend for user interactions. The project is structured to ensure scalability, maintainability, and adherence to industry best practices.
+
+== Project Phases
+
+The project development is divided into the following phases to ensure systematic and organized progress:
+
+1. **Phase 1**: Initial Setup and Core Module Development
+   - Set up the project environment, folder structure, and essential configurations.
+   - Develop core services like `CompanyService` and `ProductService`.
+   
+2. **Phase 2**: AI Integration
+   - Implement the AI Semantic Kernel for natural language processing and intelligent data retrieval.
+   - Develop models and prompts to handle user interactions.
+
+3. **Phase 3**: Redis Caching
+   - Set up Redis caching to enhance performance by storing frequently accessed data.
+   - Implement the `RedisCacheService` for managing cache operations.
+
+4. **Phase 4**: Policy and Compliance Documentation
+   - Establish company policies and compliance documents such as Privacy Policy, Terms of Service, and Code of Conduct.
+   - Integrate these documents with the project as templates for easy customization.
+
+5. **Phase 5**: Management Modules
+   - Develop modules for User Management, Employee Management, and Project Management.
+   - Implement role-based access control and department-level configurations.
+
+6. **Phase 6**: Frontend Development and API Communication
+   - Build the Blazor WebAssembly frontend with API communication to backend services.
+   - Ensure smooth data transfer and real-time updates between the frontend and backend.
+
+7. **Phase 7**: Testing, CI/CD, and Deployment
+   - Implement unit and integration testing.
+   - Set up GitHub Actions for CI/CD and deploy the Blazor frontend to GitHub Pages.
+
+== Specifications List
+
+The following specifications outline the documentation and implementation details for each module, feature, and component in the project.
+
+=== 1. Project Overview and Setup
+
+*SPEC-001*: _Project Overview_
+* Description: High-level project overview.
+* Filename: `project_overview.adoc`
+
+*SPEC-002*: _Setup and Installation Guide_
+* Description: Instructions for setting up the development environment.
+* Filename: `setup_installation.adoc`
+
+=== 2. Core Modules and Services
+
+*SPEC-CORE-001*: _Company Service_
+* Description: Details for the `CompanyService` module.
+* Filename: `company_service.adoc`
+
+*SPEC-CORE-002*: _Product Service_
+* Description: Documentation for the `ProductService` module.
+* Filename: `product_service.adoc`
+
+*SPEC-CORE-003*: _Shared Models and Utilities_
+* Description: Common data models and utility classes.
+* Filename: `shared_models_utilities.adoc`
+
+=== 3. AI Semantic Kernel Integration
+
+*SPEC-AI-001*: _Semantic Kernel Service_
+* Description: Documentation for Semantic Kernel service, NLP prompts, and processing methods.
+* Filename: `semantic_kernel_service.adoc`
+
+*SPEC-AI-002*: _AI Models and Prompts_
+* Description: Models and prompts for AI processing.
+* Filename: `ai_models_prompts.adoc`
+
+=== 4. Redis Caching
+
+*SPEC-CACHE-001*: _Redis Cache Service_
+* Description: Documentation for Redis caching service.
+* Filename: `redis_cache_service.adoc`
+
+*SPEC-CACHE-002*: _Cache Models and Helpers_
+* Description: Cache models and helper classes.
+* Filename: `cache_models_helpers.adoc`
+
+=== 5. Policies and Compliance
+
+*SPEC-POLICY-001*: _Privacy Policy_
+* Description: Privacy Policy template.
+* Filename: `privacy_policy.adoc`
+
+*SPEC-POLICY-002*: _Terms of Service_
+* Description: Terms of Service template.
+* Filename: `terms_of_service.adoc`
+
+*SPEC-POLICY-003*: _Code of Conduct_
+* Description: Code of Conduct template.
+* Filename: `code_of_conduct.adoc`
+
+=== 6. Management Modules
+
+*SPEC-MGMT-001*: _User Management_
+* Description: Role-based access and permissions management.
+* Filename: `user_management.adoc`
+
+*SPEC-MGMT-002*: _Employee Management_
+* Description: Employee management and tracking.
+* Filename: `employee_management.adoc`
+
+*SPEC-MGMT-003*: _Project Management_
+* Description: Project tracking and task management.
+* Filename: `project_management.adoc`
+
+=== 7. Infrastructure and Configuration
+
+*SPEC-INFRA-001*: _Infrastructure Setup_
+* Description: Configuration of infrastructure settings and environments.
+* Filename: `infrastructure_setup.adoc`
+
+*SPEC-INFRA-002*: _Dependency Injection and Startup_
+* Description: Dependency injection and startup configuration.
+* Filename: `dependency_injection_startup.adoc`
+
+=== 8. Website Frontend (Blazor WebAssembly)
+
+*SPEC-WEB-001*: _Website Structure and Components_
+* Description: Structure and components of the Blazor WebAssembly frontend.
+* Filename: `website_structure_components.adoc`
+
+*SPEC-WEB-002*: _API Communication_
+* Description: API communication setup between frontend and backend.
+* Filename: `api_communication.adoc`
+
+=== 9. Project Conventions and Standards
+
+*SPEC-CONV-001*: _Coding Standards and Naming Conventions_
+* Description: Coding standards and naming conventions.
+* Filename: `coding_standards_naming_conventions.adoc`
+
+*SPEC-CONV-002*: _Documentation Guidelines_
+* Description: Guidelines for writing project documentation.
+* Filename: `documentation_guidelines.adoc`
+
+=== 10. Testing and Quality Assurance
+
+*SPEC-TEST-001*: _Unit Testing_
+* Description: Unit testing practices and examples.
+* Filename: `unit_testing.adoc`
+
+*SPEC-TEST-002*: _Integration Testing_
+* Description: Integration testing procedures.
+* Filename: `integration_testing.adoc`
+
+=== 11. Deployment and CI/CD
+
+*SPEC-DEPLOY-001*: _GitHub Actions for CI/CD_
+* Description: CI/CD configuration with GitHub Actions.
+* Filename: `github_actions_ci_cd.adoc`
+
+*SPEC-DEPLOY-002*: _Deployment to GitHub Pages_
+* Description: Deployment guide for Blazor WebAssembly to GitHub Pages.
+* Filename: `deployment_github_pages.adoc`
+
+
+== Deployment to GitHub Pages
+
+The Blazor WebAssembly frontend is hosted on GitHub Pages using the `/docs` folder on the `main` branch. Ensure the following settings are configured in the repository:
+
+1. Go to **Settings > Pages** in the repository.
+2. Under **Source**, set the branch to `main` and folder to `/docs`.
+3. Click **Save**.
+
+GitHub Pages will then serve content from the `/docs` folder, and the site will be available at:
+`https://chatgpt.com/g/g-J0FYgDhN5-software-architect-gpt/c/672c7503-9694-800f-87cd-38372ca128eb/`

@@ -1,12 +1,18 @@
 ﻿# Company Template Project
 
-The **Company Template Project** is a modular, cloud-ready .NET solution designed for developing business applications with best practices in architecture, coding conventions, and documentation. This project leverages **.NET 9.0**, **C# 10+** features, and integrates the **Aspire Framework** for modular services, **AI Semantic Kernel** for intelligent data processing, **Redis** for caching and real-time data storage, and a **Blazor WebAssembly** frontend. It also includes policies and management modules for operational and organizational support.
+The **Company Template Project** is a modular, cloud-ready .NET solution designed for building business applications with best practices in architecture, coding conventions, and documentation. This project integrates **Aspire Framework** for modular services, **AI Semantic Kernel** for intelligent data processing, **Redis** for caching, **Blazor WebAssembly** for web-based documentation and interaction, and **.NET MAUI** for native mobile and desktop applications. The project is organized to ensure scalability, maintainability, and ease of use for developers and end-users.
 
 ---
 
 ## Project Overview
 
-This project serves as a foundation for building cloud-native applications, providing tools for managing company documentation, compliance policies, operational modules, AI-driven processing, and caching through Redis. The **Company Template Project** is structured to support modular services, AI-powered interactions, Redis caching, and scalable deployment.
+This project serves as a foundation for developing cloud-native applications, enabling both web and native platforms. It includes:
+
+- **.NET MAUI App**: A cross-platform application for mobile and desktop.
+- **Blazor WebAssembly App**: A web-based companion app that serves as interactive documentation and a web interface for the project.
+- **AI Semantic Kernel**: Provides AI-driven NLP capabilities.
+- **Redis Caching**: Enhances performance through caching and real-time data storage.
+- **Aspire Framework**: Supports modular and scalable services architecture.
 
 ---
 
@@ -16,182 +22,158 @@ This project serves as a foundation for building cloud-native applications, prov
 CompanyTemplateProject/
 ├── Core/                             # Core services, policies, and management modules
 │   ├── Policies/                     # Organizational policies and compliance templates
-│   │   ├── privacy_policy.adoc       # Privacy Policy template
-│   │   ├── terms_of_service.adoc     # Terms of Service template
-│   │   └── code_of_conduct.md        # Code of Conduct
 │   ├── Management/                   # Company management modules
-│   │   ├── UserManagement/           # Role-based access and permissions
-│   │   ├── EmployeeManagement/       # Employee details, roles, and departments
-│   │   └── ProjectManagement/        # Project tracking and task management
 │   ├── Services/                     # Aspire service modules
-│   │   ├── Company/                  # CompanyService module (example)
-│   │   ├── Product/                  # ProductService module (example)
-│   │   └── Shared/                   # Shared models and utilities for services
 │   ├── AI/                           # AI Semantic Kernel and related services
-│   │   ├── SemanticKernelService/    # Service layer for AI SK operations
-│   │   ├── Models/                   # Models for AI requests and responses
-│   │   └── Prompts/                  # NLP prompts for AI processing tasks
 │   └── Caching/                      # Redis caching services
-│       ├── RedisCacheService/        # Redis service layer for caching
-│       ├── Models/                   # Data models for cached objects
-│       └── Helpers/                  # Utility classes for cache operations
-│   └── README.md
 ├── Infrastructure/                   # Infrastructure configurations (e.g., appsettings.json)
-│   ├── appsettings.json              # Centralized configuration file
-│   ├── Program.cs                    # Main entry point for DI and app setup
-│   └── Startup.cs                    # Configure services, middlewares
-├── Website/                          # Blazor WebAssembly frontend
-│   ├── src/                          
-│   ├── wwwroot/                      
-│   ├── docs/                         
-│   └── README.md                     
+├── Website/                          # Blazor WebAssembly frontend for web documentation
+│   ├── src/                          # Source files for Blazor WebAssembly
+│   ├── wwwroot/                      # Static assets for Blazor
+│   └── docs/                         # Folder for GitHub Pages deployment
+├── MauiApp/                          # .NET MAUI app for mobile/desktop platforms
+│   ├── Platforms/                    # Platform-specific code for Android, iOS, etc.
+│   ├── Resources/                    # Shared resources, images, and fonts
+│   ├── Views/                        # Views for .NET MAUI UI
 ├── LICENSE
-└── README.md
+└── Project_Phases_and_Specifications.adoc
 ```
 
-- **Core**: Contains business logic, services, policies, management modules, AI processing, and Redis caching.
-- **Infrastructure**: Houses application settings, configuration files, and dependency injection setup.
-- **Website**: A Blazor WebAssembly app for frontend deployment, including static files for GitHub Pages.
+- **Core**: Contains business logic, organizational policies, management modules, AI processing, and Redis caching.
+- **Infrastructure**: Holds configuration files and dependency injection setup.
+- **Website**: Blazor WebAssembly app for web-based documentation and companion functionality.
+- **MauiApp**: .NET MAUI app for mobile and desktop deployment.
 
 ---
 
-## Modules and Purpose
+## Project Phases
 
-### Redis Caching
-
-The **Redis Caching** module enhances application performance by caching frequently accessed data, reducing load on the database, and supporting real-time data operations. Redis can also be used for caching AI model results, session data, and other data to improve response times.
-
-- **RedisCacheService** (`Caching/RedisCacheService/`): A service layer that handles interactions with Redis for caching data.
-- **Models** (`Caching/Models/`): Data models representing objects stored in the cache.
-- **Helpers** (`Caching/Helpers/`): Utility classes for cache management, such as setting expiration policies or managing cache keys.
-
-### AI Semantic Kernel (AI SK)
-
-The **AI Semantic Kernel** module provides capabilities for natural language processing, intelligent data retrieval, and user interaction. This module leverages AI SK to enhance application functionality with tasks such as generating responses, extracting information, and handling user queries.
-
-- **SemanticKernelService** (`AI/SemanticKernelService/`): Contains service classes that handle interactions with AI SK.
-- **Models** (`AI/Models/`): Defines data models for request and response handling in AI operations.
-- **Prompts** (`AI/Prompts/`): Stores reusable NLP prompts for different AI processing tasks, enabling intelligent responses to user requests.
-
-### Policies and Management Modules
-
-The **Policies** and **Management** folders contain templates and modules for operational guidelines and user management, detailed in previous sections.
-
-### Services
-
-The **Services** folder contains Aspire-based services that implement core business logic, such as `CompanyService` and `ProductService`.
+1. **Phase 1**: Initial Setup and Core Module Development.
+2. **Phase 2**: AI Integration with Semantic Kernel.
+3. **Phase 3**: Redis Caching Implementation.
+4. **Phase 4**: Policy and Compliance Documentation.
+5. **Phase 5**: Management Modules (User, Employee, Project).
+6. **Phase 6**: Frontend Development and API Communication.
+7. **Phase 7**: Testing, CI/CD, and Deployment.
 
 ---
 
-## Setup Instructions
+## Deployment Guide
 
-### Prerequisites
+### Blazor WebAssembly Deployment to GitHub Pages
 
-- **.NET 9.0 SDK**: Ensure that .NET 9.0 SDK is installed.
-- **Blazor WebAssembly**: Required for building the frontend.
-- **AI Semantic Kernel SDK**: Required for AI-related services.
-- **Redis**: Install Redis locally or use a managed Redis service (e.g., Azure Cache for Redis).
-- **Git**: For version control and pushing changes to GitHub.
-
-### Build and Run
-
-1. **Clone the Repository**:
+1. **Set Output Path**: Configure `OutputPath` in `Website/src/CompanyTemplateProject.csproj` to `/docs`.
+2. **Build the Project**:
    ```bash
-   git clone https://github.com/yourusername/CompanyTemplateProject.git
-   cd CompanyTemplateProject
+   cd Website/src
+   dotnet publish -c Release -o ../docs
    ```
+3. **Configure GitHub Pages**:
+   - Go to **Settings > Pages**.
+   - Set **Source** to `main` branch and **Folder** to `/docs`.
+4. **Automate Deployment** (Optional):
+   - Use GitHub Actions for automated deployment to GitHub Pages. See `.github/workflows/deploy.yml`.
 
-2. **Configure Application Settings**:
-   Modify `appsettings.json` in the `Infrastructure/` folder to reflect your environment configurations, including Redis and AI SK settings.
+### .NET MAUI App Distribution via GitHub Releases
 
-   Example Redis configuration:
-   ```json
-   {
-     "Redis": {
-       "ConnectionString": "localhost:6379",
-       "DefaultCacheDurationSeconds": 3600
-     }
-   }
-   ```
-
-3. **Install Redis Dependencies**:
-   If not already included, install the `StackExchange.Redis` NuGet package for Redis support:
-   ```bash
-   dotnet add Caching/RedisCacheService package StackExchange.Redis
-   ```
-
-4. **Build and Run the Backend**:
-   Navigate to the `Core/` directory and run:
-   ```bash
-   dotnet build
-   dotnet run
-   ```
-
-5. **Build the Blazor WebAssembly App**:
-   Go to the `Website/` folder and publish to the `docs` directory for GitHub Pages:
-   ```bash
-   dotnet publish -c Release -o docs
-   ```
-
-6. **Deploy to GitHub Pages**:
-   Push the changes to GitHub and set up GitHub Pages to serve from the `docs` folder on the `main` branch.
+1. **Build .NET MAUI for Each Platform**:
+   - Compile the app for each platform (e.g., Android, iOS, Windows).
+2. **Create a GitHub Release**:
+   - Upload compiled binaries (e.g., `.apk`, `.app`, `.exe`) to **Releases**.
+3. **Automate with GitHub Actions** (Optional):
+   - Set up GitHub Actions to build and publish releases on tag pushes. See `.github/workflows/release.yml`.
 
 ---
 
-## Redis Usage
+## Coding Conventions and Standards
 
-The **RedisCacheService** provides methods for setting, getting, and managing cache entries within Redis, allowing for high-performance data retrieval and storage.
+- **Naming Conventions**: PascalCase for classes and methods, camelCase for fields and parameters.
+- **Dependency Injection**: Configured in `Program.cs` and `Startup.cs`.
+- **Configuration Management**: Centralized in `appsettings.json`.
+- **Documentation Standards**: Use AsciiDoc for structured documentation.
 
-### Example Redis Caching Service
+---
 
-```c#
-namespace CompanyTemplateProject.Core.Caching.RedisCacheService
-{
-    /// <summary>
-    /// Service to interact with Redis cache.
-    /// </summary>
-    public class RedisCacheService : IRedisCacheService
-    {
-        private readonly IDatabase _redisDatabase;
+## Specifications List
 
-        public RedisCacheService(IConnectionMultiplexer redisConnection)
-        {
-            _redisDatabase = redisConnection.GetDatabase();
-        }
+Each module or component has a specification document, following best practices in modular documentation. Key specifications include:
 
-        /// <summary>
-        /// Sets a value in the Redis cache with an expiration time.
-        /// </summary>
-        public async Task SetCacheValueAsync(string key, string value, TimeSpan expiration)
-        {
-            await _redisDatabase.StringSetAsync(key, value, expiration);
-        }
+- **SPEC-CORE-001**: Company Service (`company_service.adoc`)
+- **SPEC-AI-001**: Semantic Kernel Service (`semantic_kernel_service.adoc`)
+- **SPEC-CACHE-001**: Redis Cache Service (`redis_cache_service.adoc`)
+- **SPEC-WEB-001**: Website Structure and Components (`website_structure_components.adoc`)
+- **SPEC-DEPLOY-002**: Deployment Guide for GitHub Pages and GitHub Releases (`deployment_github_pages.adoc`)
 
-        /// <summary>
-        /// Gets a cached value from Redis by key.
-        /// </summary>
-        public async Task<string> GetCacheValueAsync(string key)
-        {
-            return await _redisDatabase.StringGetAsync(key);
-        }
-    }
-}
-```
+Refer to `Project_Phases_and_Specifications.adoc` for the complete list.
 
-In `appsettings.json`, you can configure the Redis connection and cache expiration policies to suit your deployment.
+---
+
+## Testing and Quality Assurance
+
+- **Unit Tests**: Defined for core services and modules.
+- **Integration Tests**: Configured for end-to-end testing across services.
+- **CI/CD**: GitHub Actions are configured for automated builds, testing, and deployments.
 
 ---
 
 ## Additional Resources
 
-- [.NET Coding Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
+- [GitHub Pages Documentation](https://docs.github.com/en/pages)
 - [Aspire Framework](https://github.com/dotnet/aspire)
 - [AI Semantic Kernel Documentation](https://learn.microsoft.com/en-us/semantic-kernel)
 - [Redis Documentation](https://redis.io/documentation)
-- [Blazor WebAssembly Documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-7.0)
+- [.NET MAUI Documentation](https://docs.microsoft.com/en-us/dotnet/maui/what-is-maui)
+- [Blazor WebAssembly Documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-7.0)
 
 ---
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contributing
+
+We welcome contributions to improve and extend the **Company Template Project**. To contribute:
+
+1. **Fork the repository** and create your feature branch from `main`.
+2. **Make your changes** following the coding conventions and standards outlined in this README.
+3. **Submit a pull request** with a clear description of your changes, referencing any related specifications or issues.
+
+### Contribution Guidelines
+
+- **Coding Standards**: Follow the project's naming conventions, structure, and best practices to maintain consistency.
+- **Documentation**: Ensure any new features or changes are documented in the relevant `.adoc` files, especially if they affect core modules, the Blazor WebAssembly frontend, or .NET MAUI functionality.
+- **Testing**: Add unit tests for any new services, and update integration tests if your changes affect multiple components.
+
+For more details, please see the `CONTRIBUTING.md` file.
+
+---
+
+## Project Roadmap
+
+The project roadmap outlines planned features and improvements:
+
+- **Enhanced AI Capabilities**: Extend the AI Semantic Kernel to support additional NLP functions.
+- **Role-Based Access Control**: Improve the User Management module with more granular permissions.
+- **Cross-Platform Integrations**: Enhance interoperability between the .NET MAUI and Blazor WebAssembly components for seamless data sharing.
+- **Improved CI/CD Pipelines**: Expand CI/CD workflows to automate release versioning and deployment.
+
+For a detailed roadmap and milestones, refer to `Project_Phases_and_Specifications.adoc`.
+
+---
+
+## FAQ
+
+### Why use both .NET MAUI and Blazor WebAssembly?
+
+.NET MAUI is ideal for creating native mobile and desktop applications, while Blazor WebAssembly provides a lightweight, web-based companion app. This combination allows us to deliver cross-platform functionality with native performance for mobile/desktop users and a web interface for documentation or limited interactions.
+
+### How does Redis improve application performance?
+
+Redis caching is used to store frequently accessed data, reducing the load on backend services. By caching data, we can serve user requests faster, making the application more responsive.
+
+### Can I customize the Blazor WebAssembly app?
+
+Yes, the Blazor WebAssembly app is structured to allow customization. You can add new interactive components, connect additional APIs, and adjust the styling to align with your project's branding or functionality requirements.
