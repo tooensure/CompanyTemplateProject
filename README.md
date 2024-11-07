@@ -1,4 +1,5 @@
-﻿# Company Template Project
+﻿
+# Company Template Project
 
 Structured repository for managing business documentation, project management, branding, and operations with modular templates.
 
@@ -31,29 +32,20 @@ This project serves as a foundation for developing cloud-native applications, en
 
 ```plaintext
 CompanyTemplateProject/
-├── Core/
-│   ├── Policies/
-│   ├── Management/
-│   ├── Services/
-│   ├── AI/
-│   └── Caching/
-├── Infrastructure/
-├── Website/
-│   ├── src/
-│   ├── wwwroot/
-│   └── docs/
-├── MauiApp/
-│   ├── Platforms/
-│   ├── Resources/
-│   ├── Views/
+├── src/                              # All source code and project modules
+│   ├── Core/                         # Core services, policies, and management modules
+│   │   ├── Policies/                 # Organizational policies and compliance templates
+│   │   ├── Management/               # Company management modules
+│   │   ├── Services/                 # Aspire service modules
+│   │   ├── AI/                       # AI Semantic Kernel and related services
+│   │   └── Caching/                  # Redis caching services
+│   └── Infrastructure/               # Infrastructure configurations (e.g., appsettings.json)
+│   ├── Website/                      # Blazor WebAssembly frontend for web documentation
+│   └── MauiApp/                      # .NET MAUI app for mobile/desktop platforms
+├── Documentation/                    # Documentation files for the project
 ├── LICENSE
-└── Project_Phases_and_Specifications.adoc
+└── README.md
 ```
-
-- **Core**: Contains business logic, organizational policies, management modules, AI processing, and Redis caching.
-- **Infrastructure**: Holds configuration files and dependency injection setup.
-- **Website**: Blazor WebAssembly app for web-based documentation and companion functionality.
-- **MauiApp**: .NET MAUI app for mobile and desktop deployment.
 
 ## Project Phases
 
